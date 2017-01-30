@@ -83,7 +83,7 @@ tidy1 <- ddply(stdmean, .(subjectid, activity, variable), summarize, mean=mean(v
 tidy1<- arrange(tidy1, subjectid, activity, variable)
 
 print("Writing tidy.txt to workinging directory")
-write.table(tidy1, "tidy1.txt")
+write.table(tidy1, "tidy1.txt", row.name=FALSE)
 
 View(tidy1)
 print("Complete...")
